@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velaro | Proudly Indian Tiles - Coming Soon</title>
+    <meta name="description"
+        content="Velaro: Crafting India's Finest Tiles. Proudly Indian. Excellence in every square inch. Launching soon.">
+    <!-- Google Fonts for luxurious and modern typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background animation container -->
+    <div id="background-tiles"></div>
+    <div class="overlay-gradient"></div>
+
+    <div class="main-container">
+        <!-- Logo/Brand Header -->
+        <header class="brand-header fade-in-up" style="animation-delay: 0.1s;">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group logo-icon"></i>
+                <span class="logo-text">Velaro</span>
+            </div>
+            <div class="tagline">Proudly Indian</div>
+        </header>
+
+        <!-- Main Content Card (Glassmorphism) -->
+        <main class="glass-card fade-in-up" style="animation-delay: 0.3s;">
+            <div class="card-content">
+                <span class="badge">Coming Soon</span>
+                <h1 class="hero-title">Crafting India's <span>Finest Tiles</span></h1>
+                <p class="hero-subtitle">
+                    Excellence in every square inch. We are meticulously preparing our collections to bring you
+                    unparalleled quality and design, rooted in Indian heritage.
+                </p>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="days">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+
+                <!-- Contact Email -->
+                <div class="contact-section fade-in-up" style="animation-delay: 0.4s;">
+                    <p class="contact-text">Want to get in touch?</p>
+                    <a href="mailto:hello@velaro.com" class="contact-email">hello@velaro.com</a>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer fade-in-up" style="animation-delay: 0.5s;">
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">&copy; <span id="current-year"></span> Velaro Tiles. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
