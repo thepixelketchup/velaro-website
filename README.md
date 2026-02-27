@@ -1,6 +1,6 @@
 # 🏗️ Velaro Tiles - Coming Soon Page
 
-A premium, responsive "Coming Soon" landing page for **Velaro Tiles**, a brand crafting India's finest tiles. 
+A premium, responsive "Coming Soon" landing page for **Velaro Tiles**, a brand crafting India's finest tiles. Coming Soon!
 
 ## 🎨 Design & Aesthetic
 The design reflects a "Proudly Indian" luxury theme:
