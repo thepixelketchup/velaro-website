@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Optional: change subtitle text when launched
             const subtitle = document.querySelector('.hero-subtitle');
             if (subtitle) {
-                subtitle.textContent = "We have launched! Welcome to Velaro.";
+                subtitle.textContent = "We have launched! Welcome to Velaro Tiles.";
             }
         }
     }
