@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -16,6 +17,7 @@ const navLinks = [
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 50);
@@ -25,7 +27,7 @@ const Navbar = () => {
 
     useEffect(() => {
         setMobileOpen(false);
-    }, [location.pathname]);
+    }, [pathname]);
 
     return (
         <motion.nav
@@ -46,7 +48,7 @@ const Navbar = () => {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className={`text-sm uppercase tracking-[0.2em] transition-colors duration-300 font-body ${location.pathname === link.href
+                            className={`text-sm uppercase tracking-[0.2em] transition-colors duration-300 font-body ${pathname === link.href
                                 ? "text-gold"
                                 : "text-muted-foreground hover:text-gold"
                                 }`}
@@ -86,7 +88,7 @@ const Navbar = () => {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className={`text-sm uppercase tracking-[0.2em] transition-colors font-body ${location.pathname === link.href
+                                    className={`text-sm uppercase tracking-[0.2em] transition-colors font-body ${pathname === link.href
                                         ? "text-gold"
                                         : "text-muted-foreground hover:text-gold"
                                         }`}
