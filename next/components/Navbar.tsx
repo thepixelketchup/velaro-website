@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
     { label: "Home", href: "/" },
@@ -17,6 +18,8 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
 
+    const pathname = usePathname()
+
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener("scroll", onScroll);
@@ -25,7 +28,7 @@ const Navbar = () => {
 
     useEffect(() => {
         setMobileOpen(false);
-    }, [location.pathname]);
+    }, [pathname]);
 
     return (
         <motion.nav
@@ -37,7 +40,7 @@ const Navbar = () => {
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
                 <Link href="/" className="font-heading text-xl md:text-2xl font-bold tracking-wide text-foreground">
-                    Vellaro <span className="text-gradient-gold">Tiles</span>
+                    Velaro <span className="text-gradient-gold">Tiles</span>
                 </Link>
 
                 {/* Desktop */}
@@ -46,7 +49,7 @@ const Navbar = () => {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className={`text-sm uppercase tracking-[0.2em] transition-colors duration-300 font-body ${location.pathname === link.href
+                            className={`text-sm uppercase tracking-[0.2em] transition-colors duration-300 font-body ${pathname === link.href
                                 ? "text-gold"
                                 : "text-muted-foreground hover:text-gold"
                                 }`}
@@ -86,7 +89,7 @@ const Navbar = () => {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className={`text-sm uppercase tracking-[0.2em] transition-colors font-body ${location.pathname === link.href
+                                    className={`text-sm uppercase tracking-[0.2em] transition-colors font-body ${pathname === link.href
                                         ? "text-gold"
                                         : "text-muted-foreground hover:text-gold"
                                         }`}

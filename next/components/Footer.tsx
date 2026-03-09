@@ -29,7 +29,7 @@ const Footer = () => {
                     {/* Brand */}
                     <div>
                         <Link href="/" className="font-heading text-xl font-bold mb-4 block">
-                            Vellaro <span className="text-gradient-gold">Tiles</span>
+                            Velaro <span className="text-gradient-gold">Tiles</span>
                         </Link>
                         <p className="text-sm text-muted-foreground font-body leading-relaxed mb-6">
                             Premium surfaces for inspired spaces. Crafting elegance since 1998.
@@ -72,7 +72,7 @@ const Footer = () => {
 
                 <div className="border-t border-border mt-12 pt-8 text-center">
                     <p className="text-xs text-muted-foreground font-body">
-                        © {new Date().getFullYear()} Vellaro Tiles. All rights reserved.
+                        © {new Date().getFullYear()} Velaro Tiles. All rights reserved.
                     </p>
                 </div>
             </div>
