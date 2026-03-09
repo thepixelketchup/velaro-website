@@ -29,7 +29,7 @@ const Footer = () => {
                     {/* Brand */}
                     <div>
                         <Link href="/" className="font-heading text-xl font-bold mb-4 block">
-                            Vikran <span className="text-gradient-gold">Massey</span>
+                            Vellaro <span className="text-gradient-gold">Tiles</span>
                         </Link>
                         <p className="text-sm text-muted-foreground font-body leading-relaxed mb-6">
                             Premium surfaces for inspired spaces. Crafting elegance since 1998.
