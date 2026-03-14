@@ -136,6 +136,10 @@
     background: var(--color-stone);
     border-radius: 3px;
   }
+
+  a {
+    cursor: pointer;
+  }
 }
 
 @layer components {

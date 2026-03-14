@@ -31,7 +31,7 @@ const Navbar = () => {
         setIsOpen(false);
     }, [pathname]);
 
-    const isDarkHeader = !scrolled && ["/", "/about"].includes(pathname);
+    const isDarkHeader = !scrolled && ["/", "/about", "/projects", "/gallery"].includes(pathname);
     const textClass = isDarkHeader ? "text-primary-foreground" : "text-foreground";
     const textMutedClass = isDarkHeader ? "text-primary-foreground/70" : "text-foreground/70";
 
