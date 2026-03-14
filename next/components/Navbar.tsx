@@ -51,12 +51,21 @@ const Navbar = () => {
                             <Link
                                 key={link.path}
                                 href={link.path}
-                                className={`label-caps transition-colors duration-300 ${pathname === link.path
+                                className={`relative py-1 label-caps transition-colors duration-300 ${pathname === link.path
                                     ? "text-foreground"
-                                    : "text-muted-foreground hover:text-foreground"
+                                    : "text-foreground/70 hover:text-foreground"
                                     }`}
                             >
                                 {link.label}
+                                {pathname === link.path && (
+                                    <motion.span
+                                        layoutId="desktop-nav-underline"
+                                        className="absolute left-0 -bottom-1 w-full h-[1.5px] bg-foreground"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 0.3 }}
+                                    />
+                                )}
                             </Link>
                         ))}
                     </div>
@@ -91,12 +100,21 @@ const Navbar = () => {
                                 >
                                     <Link
                                         href={link.path}
-                                        className={`font-display text-3xl font-light transition-colors ${pathname === link.path
+                                        className={`relative inline-block py-1 font-display text-3xl font-light transition-colors ${pathname === link.path
                                             ? "text-foreground"
                                             : "text-muted-foreground hover:text-foreground"
                                             }`}
                                     >
                                         {link.label}
+                                        {pathname === link.path && (
+                                            <motion.span
+                                                layoutId="mobile-nav-underline"
+                                                className="absolute left-0 -bottom-1 w-full h-[2px] bg-foreground"
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{ duration: 0.3 }}
+                                            />
+                                        )}
                                     </Link>
                                 </motion.div>
                             ))}
