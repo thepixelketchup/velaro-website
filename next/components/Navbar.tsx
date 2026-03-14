@@ -10,7 +10,6 @@ const navLinks = [
     { label: "Home", path: "/" },
     { label: "Products", path: "/products" },
     { label: "Projects", path: "/projects" },
-    { label: "Technology", path: "/technology" },
     { label: "Gallery", path: "/gallery" },
     { label: "About", path: "/about" },
     { label: "Resources", path: "/resources" },
@@ -32,6 +31,10 @@ const Navbar = () => {
         setIsOpen(false);
     }, [pathname]);
 
+    const isDarkHeader = !scrolled && ["/", "/about"].includes(pathname);
+    const textClass = isDarkHeader ? "text-primary-foreground" : "text-foreground";
+    const textMutedClass = isDarkHeader ? "text-primary-foreground/70" : "text-foreground/70";
+
     return (
         <>
             <nav
@@ -41,7 +44,7 @@ const Navbar = () => {
                     }`}
             >
                 <div className="container-wide flex items-center justify-between h-20">
-                    <Link href="/" className="font-display text-2xl font-semibold tracking-tight text-foreground">
+                    <Link href="/" className={`font-display text-2xl font-semibold tracking-tight transition-colors duration-300 ${textClass}`}>
                         TERRA<span className="font-light">TILE</span>
                     </Link>
 
@@ -52,15 +55,15 @@ const Navbar = () => {
                                 key={link.path}
                                 href={link.path}
                                 className={`relative py-1 label-caps transition-colors duration-300 ${pathname === link.path
-                                    ? "text-foreground"
-                                    : "text-foreground/70 hover:text-foreground"
+                                    ? textClass
+                                    : `${textMutedClass} hover:${textClass}`
                                     }`}
                             >
                                 {link.label}
                                 {pathname === link.path && (
                                     <motion.span
                                         layoutId="desktop-nav-underline"
-                                        className="absolute left-0 -bottom-1 w-full h-[1.5px] bg-foreground"
+                                        className={`absolute left-0 -bottom-1 w-full h-[1.5px] ${isDarkHeader ? "bg-primary-foreground" : "bg-foreground"}`}
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ duration: 0.3 }}
@@ -73,7 +76,7 @@ const Navbar = () => {
                     {/* Mobile Menu Toggle */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="lg:hidden text-foreground p-2"
+                        className={`lg:hidden p-2 transition-colors duration-300 ${textClass}`}
                         aria-label="Toggle menu"
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
