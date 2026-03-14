@@ -6,15 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = [
-    { label: "Home", path: "/" },
-    { label: "Products", path: "/products" },
-    { label: "Projects", path: "/projects" },
-    { label: "Gallery", path: "/gallery" },
-    { label: "About", path: "/about" },
-    { label: "Resources", path: "/resources" },
-    { label: "Contact", path: "/contact" },
-];
+import { NAV_LINKS } from "@/constants/navigation";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +42,7 @@ const Navbar = () => {
 
                     {/* Desktop Nav */}
                     <div className="hidden lg:flex items-center gap-8">
-                        {navLinks.map((link) => (
+                        {NAV_LINKS.map((link) => (
                             <Link
                                 key={link.path}
                                 href={link.path}
@@ -94,7 +86,7 @@ const Navbar = () => {
                         className="fixed inset-0 z-40 bg-background/98 backdrop-blur-lg lg:hidden"
                     >
                         <div className="flex flex-col items-center justify-center h-full gap-8">
-                            {navLinks.map((link, i) => (
+                            {NAV_LINKS.map((link, i) => (
                                 <motion.div
                                     key={link.path}
                                     initial={{ opacity: 0, y: 20 }}

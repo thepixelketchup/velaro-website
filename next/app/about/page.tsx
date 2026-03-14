@@ -1,17 +1,15 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import PageHero from "@/components/PageHero";
-import aboutCraft from "@/assets/about-craft.jpg";
-import manufacturing from "@/assets/manufacturing.jpg";
-import { Award, Eye, Heart } from "lucide-react";
 import Image from "next/image";
+import { ABOUT_CONTENT } from "@/constants/about";
 
 const About = () => {
     return (
         <>
             <PageHero
-                title="About TerraTile"
-                subtitle="Two decades of crafting premium surfaces for architecture that matters."
-                image={aboutCraft.src}
+                title={ABOUT_CONTENT.hero.title}
+                subtitle={ABOUT_CONTENT.hero.subtitle}
+                image={ABOUT_CONTENT.hero.image.src}
             />
 
             {/* Company Story */}
@@ -19,29 +17,25 @@ const About = () => {
                 <div className="container-wide">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <AnimatedSection>
-                            <p className="label-caps text-muted-foreground mb-4">Our Story</p>
-                            <h2 className="heading-section mb-6">Born from a Love of Material</h2>
+                            <p className="label-caps text-muted-foreground mb-4">{ABOUT_CONTENT.story.label}</p>
+                            <h2 className="heading-section mb-6">{ABOUT_CONTENT.story.title}</h2>
                             <p className="body-large text-muted-foreground mb-6">
-                                Founded in 1998, TerraTile began as a small workshop with a singular obsession:
-                                creating tile surfaces that honor the beauty of natural materials while pushing
-                                the boundaries of modern manufacturing.
+                                {ABOUT_CONTENT.story.text1}
                             </p>
                             <p className="text-muted-foreground leading-relaxed mb-6">
-                                What started as a family venture in Morbi, Gujarat has grown into one of India's
-                                most respected tile manufacturers, serving architects and designers across 30+
-                                countries. Yet our core philosophy remains unchanged — every surface we create
-                                must be worthy of the space it inhabits.
+                                {ABOUT_CONTENT.story.text2}
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Today, we operate from a 500,000 sq ft state-of-the-art facility with Italian
-                                machinery, producing over 20,000 square meters of premium tiles daily. Our team
-                                of 800+ craftspeople, engineers, and designers work together to set new standards
-                                in surface innovation.
+                                {ABOUT_CONTENT.story.text3}
                             </p>
                         </AnimatedSection>
                         <AnimatedSection delay={0.2}>
                             <div className="image-reveal aspect-4/5">
-                                <Image src={aboutCraft} alt="TerraTile craftsmanship" className="w-full h-full object-cover" />
+                                <Image 
+                                    src={ABOUT_CONTENT.story.image} 
+                                    alt="TerraTile craftsmanship" 
+                                    className="w-full h-full object-cover" 
+                                />
                             </div>
                         </AnimatedSection>
                     </div>
@@ -52,23 +46,7 @@ const About = () => {
             <section className="section-padding bg-secondary">
                 <div className="container-wide">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        {[
-                            {
-                                icon: Eye,
-                                title: "Vision",
-                                text: "To be the global benchmark for premium architectural surfaces — where craft, technology, and sustainability converge.",
-                            },
-                            {
-                                icon: Heart,
-                                title: "Mission",
-                                text: "To empower architects and designers with surfaces that inspire — manufactured responsibly, designed beautifully, built to endure.",
-                            },
-                            {
-                                icon: Award,
-                                title: "Values",
-                                text: "Uncompromising quality. Relentless innovation. Deep respect for materials, people, and the planet we share.",
-                            },
-                        ].map((item, i) => (
+                        {ABOUT_CONTENT.missionVision.map((item, i) => (
                             <AnimatedSection key={item.title} delay={i * 0.1}>
                                 <div className="text-center">
                                     <item.icon size={32} className="mx-auto mb-4 text-foreground" />
@@ -87,21 +65,21 @@ const About = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <AnimatedSection>
                             <div className="image-reveal aspect-4/3">
-                                <Image src={manufacturing} alt="Manufacturing facility" className="w-full h-full object-cover" />
+                                <Image 
+                                    src={ABOUT_CONTENT.craftsmanship.image} 
+                                    alt="Manufacturing facility" 
+                                    className="w-full h-full object-cover" 
+                                />
                             </div>
                         </AnimatedSection>
                         <AnimatedSection delay={0.2}>
-                            <p className="label-caps text-muted-foreground mb-4">Craftsmanship</p>
-                            <h2 className="heading-section mb-6">The Hand Behind the Machine</h2>
+                            <p className="label-caps text-muted-foreground mb-4">{ABOUT_CONTENT.craftsmanship.label}</p>
+                            <h2 className="heading-section mb-6">{ABOUT_CONTENT.craftsmanship.title}</h2>
                             <p className="body-large text-muted-foreground mb-6">
-                                While we embrace cutting-edge technology, the human eye and hand remain at the
-                                heart of everything we create. Our master craftspeople bring decades of experience
-                                to quality control, glaze development, and design refinement.
+                                {ABOUT_CONTENT.craftsmanship.text1}
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Every tile that leaves our facility has been touched by human expertise — from
-                                the material scientist formulating the body to the artisan perfecting the surface
-                                texture. This is not mass production; it's mass craftsmanship.
+                                {ABOUT_CONTENT.craftsmanship.text2}
                             </p>
                         </AnimatedSection>
                     </div>
@@ -112,15 +90,10 @@ const About = () => {
             <section className="section-padding bg-primary text-primary-foreground">
                 <div className="container-wide text-center">
                     <AnimatedSection>
-                        <p className="label-caps text-primary-foreground/60 mb-4">Recognition</p>
-                        <h2 className="heading-section mb-12">Awards & Accolades</h2>
+                        <p className="label-caps text-primary-foreground/60 mb-4">{ABOUT_CONTENT.awards.label}</p>
+                        <h2 className="heading-section mb-12">{ABOUT_CONTENT.awards.title}</h2>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                            {[
-                                { award: "Red Dot Design Award", year: "2024" },
-                                { award: "IF Design Award", year: "2023" },
-                                { award: "India Design Mark", year: "2022" },
-                                { award: "Green Building Award", year: "2023" },
-                            ].map((item) => (
+                            {ABOUT_CONTENT.awards.list.map((item) => (
                                 <div key={item.award} className="p-6 border border-primary-foreground/10">
                                     <p className="font-display text-lg font-light mb-1">{item.award}</p>
                                     <p className="label-caps text-primary-foreground/50">{item.year}</p>
