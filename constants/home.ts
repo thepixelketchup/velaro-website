@@ -11,15 +11,15 @@ export const HOME_CONTENT = {
     hero: {
         image: heroImage,
         label: "Premium Surfaces",
-        title: "Crafting Surfaces for Modern Spaces",
-        subtitle: "Where artistry meets architecture. Premium tiles designed for spaces that inspire.",
+        title: "Elevate Spaces with Timeless Surfaces",
+        subtitle: "Premium tiles designed for modern living and commercial excellence.",
         ctaSecondary: "View Projects",
     },
     philosophy: {
         label: "Our Philosophy",
         title: "Where Material Meets Meaning",
-        text1: `At ${SITE_CONFIG.name}, we believe every surface tells a story. For over two decades, we've been crafting tiles that transform spaces into experiences — merging traditional craftsmanship with contemporary design innovation.`,
-        text2: "Our collections draw inspiration from nature's most enduring textures — stone, marble, wood, and earth — reimagined through advanced manufacturing processes to create surfaces of extraordinary beauty and durability.",
+        text1: `${SITE_CONFIG.name} is a growing tile brand focused on delivering high-quality, design-driven surfaces for modern spaces. We cater primarily to B2B clients including dealers, builders, and architects, ensuring reliability in both product and supply`,
+        text2: "We believe tiles are the foundation of a space’s identity. Our approach blends aesthetics with durability, ensuring every surface is both visually refined and built to last.",
         image: wallTiles,
     },
     collections: [
@@ -32,7 +32,7 @@ export const HOME_CONTENT = {
     technology: {
         label: "Technology",
         title: "Innovation in Every Tile",
-        text: "Our state-of-the-art manufacturing combines Italian engineering with artisanal expertise. Each tile undergoes rigorous quality control to ensure exceptional finish, durability, and consistency.",
+        text: "Our tiles are produced using advanced manufacturing techniques and high-grade raw materials. With strict quality control and precision processes, we ensure consistency in finish, strength, and performance across every batch.",
         items: ["Advanced Digital Printing", "High-Pressure Compaction", "Precision Kiln Firing", "Nano Surface Treatment"],
     },
     impact: {
