@@ -38,7 +38,7 @@ export const ABOUT_CONTENT = {
         label: "Craftsmanship",
         title: "The Hand Behind the Machine",
         text1: "We prioritize consistency, finish quality, and design precision. Every product is selected and delivered with a focus on performance and long-term usability.",
-        // text2: "Every tile that leaves our facility has been touched by human expertise — from the material scientist formulating the body to the artisan perfecting the surface texture. This is not mass production; it's mass craftsmanship.",
+        text2: "Every tile that leaves our facility has been touched by human expertise — from the material scientist formulating the body to the artisan perfecting the surface texture. This is not mass production; it's mass craftsmanship.",
         image: manufacturing,
     },
     awards: {
