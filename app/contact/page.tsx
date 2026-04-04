@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import AnimatedSection from "@/components/AnimatedSection";
 import PageHero from "@/components/PageHero";
-import ContactForm from "@/components/ContactForm";
 import { MessageCircle } from "lucide-react";
 import { CONTACT_CONTENT } from "@/constants/contact";
 
+import { SITE_CONFIG } from "@/constants/site";
+
 export const metadata: Metadata = {
-    title: "Contact Us | TerraTile",
-    description: "Get in touch with the TerraTile team for product inquiries, project consultations, and more.",
+    title: `Contact Us | ${SITE_CONFIG.name}`,
+    description: `Get in touch with the ${SITE_CONFIG.name} team for product inquiries, project consultations, and more.`,
 };
 
 const Contact = () => {
@@ -21,10 +22,21 @@ const Contact = () => {
             <section className="section-padding">
                 <div className="container-wide">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-                        {/* Contact Form */}
+                        {/* Map taking the place of the old Contact Form */}
                         <AnimatedSection>
-                            <h2 className="font-display text-2xl font-light mb-8">{CONTACT_CONTENT.form.title}</h2>
-                            <ContactForm />
+                            <h2 className="font-display text-2xl font-light mb-8">Our Location</h2>
+                            <div className="aspect-4/3 bg-secondary w-full">
+                                <iframe
+                                    src={CONTACT_CONTENT.map.src}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title={CONTACT_CONTENT.map.title}
+                                />
+                            </div>
                         </AnimatedSection>
 
                         {/* Contact Info */}
@@ -53,20 +65,6 @@ const Contact = () => {
                             >
                                 <MessageCircle size={18} /> {CONTACT_CONTENT.whatsapp.label}
                             </a>
-
-                            {/* Map */}
-                            <div className="aspect-[4/3] bg-secondary">
-                                <iframe
-                                    src={CONTACT_CONTENT.map.src}
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title={CONTACT_CONTENT.map.title}
-                                />
-                            </div>
                         </AnimatedSection>
                     </div>
                 </div>

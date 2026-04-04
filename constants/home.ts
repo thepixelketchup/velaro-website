@@ -5,6 +5,7 @@ import floorTiles from "@/assets/tiles-floor-collection.jpg";
 import decorativeTiles from "@/assets/tiles-decorative-collection.jpg";
 import designerTiles from "@/assets/tiles-designer-collection.jpg";
 import customTiles from "@/assets/tiles-custom-collection.jpg";
+import { SITE_CONFIG } from "@/constants/site";
 
 export const HOME_CONTENT = {
     hero: {
@@ -17,7 +18,7 @@ export const HOME_CONTENT = {
     philosophy: {
         label: "Our Philosophy",
         title: "Where Material Meets Meaning",
-        text1: "At TerraTile, we believe every surface tells a story. For over two decades, we've been crafting tiles that transform spaces into experiences — merging traditional craftsmanship with contemporary design innovation.",
+        text1: `At ${SITE_CONFIG.name}, we believe every surface tells a story. For over two decades, we've been crafting tiles that transform spaces into experiences — merging traditional craftsmanship with contemporary design innovation.`,
         text2: "Our collections draw inspiration from nature's most enduring textures — stone, marble, wood, and earth — reimagined through advanced manufacturing processes to create surfaces of extraordinary beauty and durability.",
         image: wallTiles,
     },
@@ -44,7 +45,6 @@ export const HOME_CONTENT = {
             { icon: Gem, label: "Collections", value: "120+" },
         ],
     },
-    featuredIn: ["Architectural Digest", "Elle Decor", "Wallpaper*", "Dezeen", "Surface Magazine"],
     cta: {
         title: "Ready to Transform Your Space?",
         text: "Explore our collections or get in touch with our design consultants to bring your vision to life.",

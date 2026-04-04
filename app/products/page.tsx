@@ -2,6 +2,14 @@ import AnimatedSection from "@/components/AnimatedSection";
 import PageHero from "@/components/PageHero";
 import Link from "next/link";
 import { PRODUCTS_CONTENT } from "@/constants/products";
+import { Metadata } from 'next';
+
+import { SITE_CONFIG } from "@/constants/site";
+
+export const metadata: Metadata = {
+    title: `Products | ${SITE_CONFIG.name}`,
+    description: `Explore our diverse range of premium tile collections and finishes by ${SITE_CONFIG.name}.`,
+};
 
 const Products = () => {
   return (

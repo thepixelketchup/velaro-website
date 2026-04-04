@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { SITE_CONFIG } from "@/constants/site";
 
 export const CONTACT_CONTENT = {
     hero: {
@@ -14,7 +15,7 @@ export const CONTACT_CONTENT = {
             {
                 icon: MapPin,
                 label: "Office Address",
-                content: "TerraTile Design Studio\n42 Design District, Lower Parel\nMumbai, Maharashtra 400013, India",
+                content: `${SITE_CONFIG.name} Design Studio\n42 Design District, Lower Parel\nMumbai, Maharashtra 400013, India`,
             },
             {
                 icon: Phone,
@@ -24,7 +25,7 @@ export const CONTACT_CONTENT = {
             {
                 icon: Mail,
                 label: "Email",
-                content: "hello@terratile.com",
+                content: SITE_CONFIG.email,
             },
             {
                 icon: Clock,
@@ -38,7 +39,7 @@ export const CONTACT_CONTENT = {
         link: "https://wa.me/912245678900",
     },
     map: {
-        title: "TerraTile Office Location",
+        title: `${SITE_CONFIG.name} Office Location`,
         src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.1!2d72.82!3d19.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAw&um=1&ie=UTF-8",
     },
 };

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { NAV_LINKS } from "@/constants/navigation";
+import { NAV_LINKS, BRAND_INFO } from "@/constants/navigation";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,8 +36,8 @@ const Navbar = () => {
                     }`}
             >
                 <div className="container-wide flex items-center justify-between h-20">
-                    <Link href="/" className={`font-display text-2xl font-semibold tracking-tight transition-colors duration-300 ${textClass}`}>
-                        TERRA<span className="font-light">TILE</span>
+                    <Link href="/" className={`font-display text-2xl font-semibold tracking-tight transition-colors duration-300 uppercase ${textClass}`}>
+                        {BRAND_INFO.name.split(" ")[0]}<span className="font-light"> {BRAND_INFO.name.split(" ").slice(1).join(" ")}</span>
                     </Link>
 
                     {/* Desktop Nav */}

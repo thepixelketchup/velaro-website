@@ -2,6 +2,14 @@ import AnimatedSection from "@/components/AnimatedSection";
 import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import { ABOUT_CONTENT } from "@/constants/about";
+import { Metadata } from 'next';
+
+import { SITE_CONFIG } from "@/constants/site";
+
+export const metadata: Metadata = {
+    title: `About Us | ${SITE_CONFIG.name}`,
+    description: `Learn more about ${SITE_CONFIG.name}'s history, craftsmanship, and commitment to quality.`,
+};
 
 const About = () => {
     return (

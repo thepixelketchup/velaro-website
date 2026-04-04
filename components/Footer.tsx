@@ -9,8 +9,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
                     {/* Brand */}
                     <div className="lg:col-span-1">
-                        <h3 className="font-display text-2xl font-semibold tracking-tight mb-4">
-                            {BRAND_INFO.name.slice(0, 5)}<span className="font-light">{BRAND_INFO.name.slice(5)}</span>
+                        <h3 className="font-display text-2xl font-semibold tracking-tight mb-4 uppercase">
+                            {BRAND_INFO.name.split(" ")[0]}<span className="font-light"> {BRAND_INFO.name.split(" ").slice(1).join(" ")}</span>
                         </h3>
                         <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
                             {BRAND_INFO.tagline}

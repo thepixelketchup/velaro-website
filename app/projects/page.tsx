@@ -2,6 +2,14 @@ import AnimatedSection from "@/components/AnimatedSection";
 import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import { PROJECTS_CONTENT } from "@/constants/projects";
+import { Metadata } from 'next';
+
+import { SITE_CONFIG } from "@/constants/site";
+
+export const metadata: Metadata = {
+    title: `Projects | ${SITE_CONFIG.name}`,
+    description: `View our featured residential and commercial architectural projects by ${SITE_CONFIG.name}.`,
+};
 
 const Projects = () => {
     return (

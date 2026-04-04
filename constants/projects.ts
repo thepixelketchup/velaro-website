@@ -4,6 +4,7 @@ import projectRestaurant from "@/assets/project-restaurant.jpg";
 import projectOffice from "@/assets/project-office.jpg";
 import projectShowroom from "@/assets/project-showroom.jpg";
 import galleryBathroom from "@/assets/gallery-bathroom.jpg";
+import { SITE_CONFIG } from "@/constants/site";
 
 export const PROJECTS_CONTENT = {
     hero: {
@@ -48,13 +49,13 @@ export const PROJECTS_CONTENT = {
             tiles: "Urban Loft Collection",
         },
         {
-            name: "TerraTile Experience Centre",
+            name: `${SITE_CONFIG.name} Experience Centre`,
             location: "Ahmedabad, India",
             type: "Showroom",
             image: projectShowroom,
             description: "Our flagship showroom designed as an immersive gallery experience, showcasing the full breadth of our tile collections.",
             tiles: "Multiple Collections",
-            architect: "TerraTile Design Studio",
+            architect: `${SITE_CONFIG.name} Design Studio`,
         },
         {
             name: "The Azure Spa",

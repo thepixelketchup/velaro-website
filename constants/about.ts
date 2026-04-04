@@ -1,17 +1,18 @@
 import { Award, Eye, Heart } from "lucide-react";
 import aboutCraft from "@/assets/about-craft.jpg";
 import manufacturing from "@/assets/manufacturing.jpg";
+import { SITE_CONFIG } from "@/constants/site";
 
 export const ABOUT_CONTENT = {
     hero: {
-        title: "About TerraTile",
+        title: `About ${SITE_CONFIG.name}`,
         subtitle: "Two decades of crafting premium surfaces for architecture that matters.",
         image: aboutCraft,
     },
     story: {
         label: "Our Story",
         title: "Born from a Love of Material",
-        text1: "Founded in 1998, TerraTile began as a small workshop with a singular obsession: creating tile surfaces that honor the beauty of natural materials while pushing the boundaries of modern manufacturing.",
+        text1: `Founded in 1998, ${SITE_CONFIG.name} began as a small workshop with a singular obsession: creating tile surfaces that honor the beauty of natural materials while pushing the boundaries of modern manufacturing.`,
         text2: "What started as a family venture in Morbi, Gujarat has grown into one of India's most respected tile manufacturers, serving architects and designers across 30+ countries. Yet our core philosophy remains unchanged — every surface we create must be worthy of the space it inhabits.",
         text3: "Today, we operate from a 500,000 sq ft state-of-the-art facility with Italian machinery, producing over 20,000 square meters of premium tiles daily. Our team of 800+ craftspeople, engineers, and designers work together to set new standards in surface innovation.",
         image: aboutCraft,

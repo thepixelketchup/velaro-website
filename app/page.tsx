@@ -243,22 +243,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Media / Recognition */}
-      <section className="py-16 bg-secondary">
-        <div className="container-wide">
-          <AnimatedSection>
-            <p className="label-caps text-muted-foreground text-center mb-10">Featured In</p>
-            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
-              {HOME_CONTENT.featuredIn.map((pub) => (
-                <span key={pub} className="font-display text-lg md:text-xl text-muted-foreground/60 font-light italic">
-                  {pub}
-                </span>
-              ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="section-padding">
         <div className="container-wide text-center">
