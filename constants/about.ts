@@ -21,12 +21,12 @@ export const ABOUT_CONTENT = {
         {
             icon: Eye,
             title: "Vision",
-            text: "To be the global benchmark for premium architectural surfaces — where craft, technology, and sustainability converge.",
+            text: "To become a trusted and scalable tile brand known for reliability, product quality, and strong business relationships.",
         },
         {
             icon: Heart,
             title: "Mission",
-            text: "To empower architects and designers with surfaces that inspire — manufactured responsibly, designed beautifully, built to endure.",
+            text: "To provide high-quality tile products that meet the functional and aesthetic needs of modern construction",
         },
         {
             icon: Award,
@@ -37,8 +37,8 @@ export const ABOUT_CONTENT = {
     craftsmanship: {
         label: "Craftsmanship",
         title: "The Hand Behind the Machine",
-        text1: "While we embrace cutting-edge technology, the human eye and hand remain at the heart of everything we create. Our master craftspeople bring decades of experience to quality control, glaze development, and design refinement.",
-        text2: "Every tile that leaves our facility has been touched by human expertise — from the material scientist formulating the body to the artisan perfecting the surface texture. This is not mass production; it's mass craftsmanship.",
+        text1: "We prioritize consistency, finish quality, and design precision. Every product is selected and delivered with a focus on performance and long-term usability.",
+        // text2: "Every tile that leaves our facility has been touched by human expertise — from the material scientist formulating the body to the artisan perfecting the surface texture. This is not mass production; it's mass craftsmanship.",
         image: manufacturing,
     },
     awards: {
