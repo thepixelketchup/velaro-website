@@ -13,6 +13,7 @@ export const HOME_CONTENT = {
         label: "Premium Surfaces",
         title: "Elevate Spaces with Timeless Surfaces",
         subtitle: "Premium tiles designed for modern living and commercial excellence.",
+        ctaprimary: "View Products",
         ctaSecondary: "View Projects",
     },
     philosophy: {
