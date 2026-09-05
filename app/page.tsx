@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { HOME_CONTENT } from "@/constants/home";
 
+const MotionImage = motion(Image);
 
 const Index = () => {
   return (
@@ -14,10 +15,12 @@ const Index = () => {
       {/* Hero */}
       <section className="relative h-screen min-h-[600px] flex items-center">
         <div className="absolute inset-0">
-          <motion.img
-            src={HOME_CONTENT.hero.image.src}
+          <MotionImage
+            src={HOME_CONTENT.hero.image}
             alt="Premium tile interior"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            className="object-cover"
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
@@ -41,11 +44,10 @@ const Index = () => {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2 bg-primary-foreground text-foreground px-8 py-4 label-caps hover:bg-primary-foreground/90 transition-colors"
+                className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 label-caps hover:bg-foreground/90 transition-colors"
               >
-                Explore Collections <ArrowRight size={14} />
+                Explore Surfaces <ArrowRight size={14} />
               </Link>
-
             </div>
           </motion.div>
         </div>
@@ -66,11 +68,12 @@ const Index = () => {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
-              <div className="image-reveal aspect-4/5">
-                <img
-                  src={HOME_CONTENT.philosophy.image.src}
-                  alt="TerraTile craftsmanship"
-                  className="w-full h-full object-cover"
+              <div className="image-reveal aspect-4/5 relative">
+                <Image
+                  src={HOME_CONTENT.philosophy.image}
+                  alt="Velaro craftsmanship"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </AnimatedSection>
@@ -99,11 +102,12 @@ const Index = () => {
             {HOME_CONTENT.collections.slice(0, 3).map((collection, i) => (
               <AnimatedSection key={collection.slug} delay={i * 0.1}>
                 <Link href={`/products/${collection.slug}`} className="group block">
-                  <div className="image-reveal aspect-3/4 mb-4">
-                    <img
-                      src={collection.image.src}
+                  <div className="image-reveal aspect-3/4 mb-4 relative">
+                    <Image
+                      src={collection.image}
                       alt={collection.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <h3 className="font-display text-xl font-medium group-hover:text-muted-foreground transition-colors">
@@ -118,11 +122,12 @@ const Index = () => {
             {HOME_CONTENT.collections.slice(3).map((collection, i) => (
               <AnimatedSection key={collection.slug} delay={i * 0.1}>
                 <Link href={`/products/${collection.slug}`} className="group block">
-                  <div className="image-reveal aspect-video mb-4">
-                    <img
-                      src={collection.image.src}
+                  <div className="image-reveal aspect-video mb-4 relative">
+                    <Image
+                      src={collection.image}
                       alt={collection.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <h3 className="font-display text-xl font-medium group-hover:text-muted-foreground transition-colors">
@@ -140,11 +145,12 @@ const Index = () => {
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <AnimatedSection>
-              <div className="image-reveal aspect-4/3">
+              <div className="image-reveal aspect-4/3 relative">
                 <Image
                   src={HOME_CONTENT.hero.image}
                   alt="Tile manufacturing"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </AnimatedSection>
@@ -162,18 +168,12 @@ const Index = () => {
                   </div>
                 ))}
               </div>
-              <Link
-                href="/technology"
-                className="inline-flex items-center gap-2 label-caps mt-8 text-foreground hover:gap-3 transition-all"
-              >
-                Learn More <ArrowRight size={14} />
-              </Link>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Impact / Quality */}
+      {/* Impact / Quality — Terracotta section (70% brand color) */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-wide">
           <AnimatedSection>
@@ -196,8 +196,6 @@ const Index = () => {
         </div>
       </section>
 
-
-
       {/* CTA */}
       <section className="section-padding">
         <div className="container-wide text-center">
@@ -209,9 +207,9 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 label-caps hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 label-caps hover:bg-foreground/90 transition-colors"
               >
-                Explore Products <ArrowRight size={14} />
+                Explore Surfaces <ArrowRight size={14} />
               </Link>
               <Link
                 href="/contact"

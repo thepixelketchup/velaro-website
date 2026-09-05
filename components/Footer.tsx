@@ -1,42 +1,50 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { FOOTER_LINKS, BRAND_INFO } from "@/constants/navigation";
 
 const Footer = () => {
     return (
-        <footer className="bg-primary text-primary-foreground">
+        <footer className="bg-foreground text-background">
             <div className="container-wide section-padding">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
                     {/* Brand */}
                     <div className="lg:col-span-1">
                         <div className="mb-4">
-                            <img src="/Logo_white.svg" alt="Velaro" className="h-8 w-auto" />
+                            <Image
+                                src="/Logo_white.svg"
+                                alt="Velaro"
+                                width={120}
+                                height={32}
+                                unoptimized
+                                className="h-8 w-auto"
+                            />
                         </div>
-                        <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
+                        <p className="text-background/70 text-sm leading-relaxed mb-6">
                             {BRAND_INFO.tagline}
                         </p>
                         <div className="flex gap-4">
                             {BRAND_INFO.socials.map((social) => (
-                                <a
+                                <Link
                                     key={social.label}
                                     href={social.href}
-                                    className="label-caps text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+                                    className="label-caps text-background/50 hover:text-background transition-colors"
                                 >
                                     {social.label}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="label-caps text-primary-foreground/50 mb-6">Explore</h4>
+                        <h4 className="label-caps text-background/50 mb-6">Explore</h4>
                         <div className="flex flex-col gap-3">
                             {FOOTER_LINKS.explore.map((link) => (
                                 <Link
                                     key={link.path}
                                     href={link.path}
-                                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                                    className="text-background/70 hover:text-background transition-colors text-sm"
                                 >
                                     {link.label}
                                 </Link>
@@ -46,13 +54,13 @@ const Footer = () => {
 
                     {/* Company */}
                     <div>
-                        <h4 className="label-caps text-primary-foreground/50 mb-6">Company</h4>
+                        <h4 className="label-caps text-background/50 mb-6">Company</h4>
                         <div className="flex flex-col gap-3">
                             {FOOTER_LINKS.company.map((link) => (
                                 <Link
                                     key={link.path}
                                     href={link.path}
-                                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                                    className="text-background/70 hover:text-background transition-colors text-sm"
                                 >
                                     {link.label}
                                 </Link>
@@ -62,8 +70,8 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h4 className="label-caps text-primary-foreground/50 mb-6">Contact</h4>
-                        <div className="flex flex-col gap-4 text-sm text-primary-foreground/70">
+                        <h4 className="label-caps text-background/50 mb-6">Contact</h4>
+                        <div className="flex flex-col gap-4 text-sm text-background/70">
                             <div className="flex items-start gap-3">
                                 <MapPin size={16} className="mt-0.5 shrink-0" />
                                 <span>{BRAND_INFO.address}</span>
@@ -80,11 +88,11 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-primary-foreground/10 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary-foreground/40">
+                <div className="border-t border-background/10 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-background/40">
                     <p>{BRAND_INFO.copyright}</p>
                     <div className="flex gap-6">
-                        <a href="#" className="hover:text-primary-foreground/70 transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-primary-foreground/70 transition-colors">Terms of Service</a>
+                        <Link href="#" className="hover:text-background/70 transition-colors">Privacy Policy</Link>
+                        <Link href="#" className="hover:text-background/70 transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

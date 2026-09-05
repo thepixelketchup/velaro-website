@@ -39,10 +39,10 @@ const About = () => {
                         </AnimatedSection>
                         <AnimatedSection delay={0.2}>
                             <div className="image-reveal aspect-4/5">
-                                <Image 
-                                    src={ABOUT_CONTENT.story.image} 
-                                    alt="TerraTile craftsmanship" 
-                                    className="w-full h-full object-cover" 
+                                <Image
+                                    src={ABOUT_CONTENT.story.image}
+                                    alt="TerraTile craftsmanship"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                         </AnimatedSection>
@@ -73,10 +73,10 @@ const About = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <AnimatedSection>
                             <div className="image-reveal aspect-4/3">
-                                <Image 
-                                    src={ABOUT_CONTENT.craftsmanship.image} 
-                                    alt="Manufacturing facility" 
-                                    className="w-full h-full object-cover" 
+                                <Image
+                                    src={ABOUT_CONTENT.craftsmanship.image}
+                                    alt="Manufacturing facility"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                         </AnimatedSection>
@@ -91,24 +91,6 @@ const About = () => {
                             </p>
                         </AnimatedSection>
                     </div>
-                </div>
-            </section>
-
-            {/* Awards */}
-            <section className="section-padding bg-primary text-primary-foreground">
-                <div className="container-wide text-center">
-                    <AnimatedSection>
-                        <p className="label-caps text-primary-foreground/60 mb-4">{ABOUT_CONTENT.awards.label}</p>
-                        <h2 className="heading-section mb-12">{ABOUT_CONTENT.awards.title}</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                            {ABOUT_CONTENT.awards.list.map((item) => (
-                                <div key={item.award} className="p-6 border border-primary-foreground/10">
-                                    <p className="font-display text-lg font-light mb-1">{item.award}</p>
-                                    <p className="label-caps text-primary-foreground/50">{item.year}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </AnimatedSection>
                 </div>
             </section>
         </>

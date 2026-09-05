@@ -19,48 +19,54 @@
 
 @theme {
 
-  /* HSL BASE VALUES */
-  --background-hsl: 40 20% 97%;
-  --foreground-hsl: 30 10% 15%;
+  /* ── Brand Colors ──────────────────────────────────────────
+     Terracotta Ember  #C6532C  →  HSL 15 64% 47%   (70%)
+     Ivory Mist        #ffffff  →  HSL 0  0%  100%  (20%)
+     Espresso Brown    #381A11  →  HSL 14 53% 14%   (5%)
+     Cloud Sand        #F6EFE5  →  HSL 35 49% 93%   (5%)
+  ─────────────────────────────────────────────────────────── */
 
-  --card-hsl: 40 15% 95%;
-  --card-foreground-hsl: 30 10% 15%;
+  --background-hsl: 0 0% 100%;          /* Ivory Mist */
+  --foreground-hsl: 14 53% 14%;         /* Espresso Brown */
 
-  --popover-hsl: 40 20% 97%;
-  --popover-foreground-hsl: 30 10% 15%;
+  --card-hsl: 35 49% 93%;               /* Cloud Sand */
+  --card-foreground-hsl: 14 53% 14%;    /* Espresso Brown */
 
-  --primary-hsl: 30 10% 15%;
-  --primary-foreground-hsl: 40 20% 97%;
+  --popover-hsl: 0 0% 100%;
+  --popover-foreground-hsl: 14 53% 14%;
 
-  --secondary-hsl: 35 12% 90%;
-  --secondary-foreground-hsl: 30 10% 25%;
+  --primary-hsl: 15 64% 47%;            /* Terracotta Ember — brand sections (70%) */
+  --primary-foreground-hsl: 0 0% 100%; /* Ivory Mist */
 
-  --muted-hsl: 35 10% 92%;
-  --muted-foreground-hsl: 30 5% 50%;
+  --secondary-hsl: 35 49% 93%;          /* Cloud Sand */
+  --secondary-foreground-hsl: 14 53% 14%;
 
-  --accent-hsl: 28 30% 82%;
-  --accent-foreground-hsl: 30 10% 15%;
+  --muted-hsl: 35 30% 88%;              /* Deeper Cloud Sand */
+  --muted-foreground-hsl: 14 20% 45%;  /* Medium warm brown */
+
+  --accent-hsl: 15 20% 93%;             /* Warm Terracotta tint */
+  --accent-foreground-hsl: 15 64% 47%; /* Terracotta Ember — brand accents, dots */
 
   --destructive-hsl: 0 84.2% 60.2%;
-  --destructive-foreground-hsl: 210 40% 98%;
+  --destructive-foreground-hsl: 0 0% 100%;
 
-  --border-hsl: 35 15% 88%;
-  --input-hsl: 35 15% 88%;
-  --ring-hsl: 30 10% 15%;
+  --border-hsl: 35 25% 85%;             /* Warm sandy border */
+  --input-hsl: 35 25% 85%;
+  --ring-hsl: 15 64% 47%;               /* Terracotta focus ring */
 
-  --stone-hsl: 35 8% 75%;
-  --stone-foreground-hsl: 30 10% 15%;
-  --warm-hsl: 30 25% 92%;
-  --charcoal-hsl: 30 5% 25%;
+  --stone-hsl: 35 20% 70%;
+  --stone-foreground-hsl: 14 53% 14%;
+  --warm-hsl: 35 49% 93%;               /* Cloud Sand */
+  --charcoal-hsl: 14 53% 22%;           /* Mid Espresso */
 
-  --sidebar-background-hsl: 0 0% 98%;
-  --sidebar-foreground-hsl: 240 5.3% 26.1%;
-  --sidebar-primary-hsl: 240 5.9% 10%;
-  --sidebar-primary-foreground-hsl: 0 0% 98%;
-  --sidebar-accent-hsl: 240 4.8% 95.9%;
-  --sidebar-accent-foreground-hsl: 240 5.9% 10%;
-  --sidebar-border-hsl: 220 13% 91%;
-  --sidebar-ring-hsl: 217.2 91.2% 59.8%;
+  --sidebar-background-hsl: 35 49% 93%;
+  --sidebar-foreground-hsl: 14 53% 14%;
+  --sidebar-primary-hsl: 15 64% 47%;
+  --sidebar-primary-foreground-hsl: 0 0% 100%;
+  --sidebar-accent-hsl: 35 30% 88%;
+  --sidebar-accent-foreground-hsl: 14 53% 14%;
+  --sidebar-border-hsl: 35 25% 85%;
+  --sidebar-ring-hsl: 15 64% 47%;
 
   /* USABLE VARIABLES */
 

@@ -1,13 +1,14 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import PageHero from "@/components/PageHero";
+import Link from "next/link";
+import Image from "next/image";
 import { PRODUCTS_CONTENT } from "@/constants/products";
 import { Metadata } from 'next';
-
 import { SITE_CONFIG } from "@/constants/site";
 
 export const metadata: Metadata = {
     title: `Products | ${SITE_CONFIG.name}`,
-    description: `Explore our diverse range of premium tile collections and finishes by ${SITE_CONFIG.name}.`,
+    description: `Explore our diverse range of premium tile surfaces and finishes by ${SITE_CONFIG.name}.`,
 };
 
 const Products = () => {
@@ -26,13 +27,19 @@ const Products = () => {
               <AnimatedSection key={collection.slug}>
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}>
                   <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                    <a href="/Velaro - Brochure.pdf" target="_blank" rel="noopener noreferrer" className="image-reveal block aspect-4/5">
-                      <img
-                        src={collection.image.src}
+                    <Link
+                      href="/Velaro - Brochure.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="image-reveal block aspect-4/5 relative"
+                    >
+                      <Image
+                        src={collection.image}
                         alt={collection.name}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className={i % 2 === 1 ? "lg:order-1" : ""}>
                     <p className="label-caps text-muted-foreground mb-3">Surface</p>
@@ -66,14 +73,14 @@ const Products = () => {
                       </div>
                     </div>
 
-                    <a
+                    <Link
                       href="/Velaro - Brochure.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 label-caps hover:bg-primary/90 transition-colors"
+                      className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 label-caps hover:bg-foreground/90 transition-colors"
                     >
                       View Surface
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </AnimatedSection>

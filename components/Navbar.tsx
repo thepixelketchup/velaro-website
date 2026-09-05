@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { NAV_LINKS, BRAND_INFO } from "@/constants/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +38,12 @@ const Navbar = () => {
             >
                 <div className="container-wide flex items-center justify-between h-20">
                     <Link href="/" className="flex items-center">
-                        <img
+                        <Image
                             src={isDarkHeader ? "/Logo_white.svg" : "/Logo_orange.svg"}
                             alt="Velaro"
+                            width={120}
+                            height={32}
+                            unoptimized
                             className="h-8 w-auto transition-all duration-300"
                         />
                     </Link>
