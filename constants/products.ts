@@ -6,7 +6,7 @@ import customTiles from "@/assets/tiles-custom-collection.jpg";
 
 export const PRODUCTS_CONTENT = {
     hero: {
-        title: "Tile Collections",
+        title: "Surfaces",
         subtitle: "Explore our range of tiles crafted to deliver durability, aesthetic appeal, and consistent performance across applications.",
         image: floorTiles,
     },

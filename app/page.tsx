@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Link from "next/link";
 import Image from "next/image";
 import { HOME_CONTENT } from "@/constants/home";
-import { PROJECTS_CONTENT } from "@/constants/projects";
+
 
 const Index = () => {
   return (
@@ -45,12 +45,7 @@ const Index = () => {
               >
                 Explore Collections <ArrowRight size={14} />
               </Link>
-              <Link
-                href="/projects"
-                className="inline-flex items-center gap-2 border border-primary-foreground/40 text-primary-foreground px-8 py-4 label-caps hover:bg-primary-foreground/10 transition-colors"
-              >
-                {HOME_CONTENT.hero.ctaSecondary}
-              </Link>
+
             </div>
           </motion.div>
         </div>
@@ -89,14 +84,13 @@ const Index = () => {
           <AnimatedSection>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
               <div>
-                <p className="label-caps text-muted-foreground mb-4">Collections</p>
-                <h2 className="heading-section">Our Products</h2>
+                <h2 className="heading-section">Our Surfaces</h2>
               </div>
               <Link
                 href="/products"
                 className="label-caps text-foreground mt-6 md:mt-0 inline-flex items-center gap-2 hover:gap-3 transition-all"
               >
-                View All Collections <ArrowRight size={14} />
+                View All Surfaces <ArrowRight size={14} />
               </Link>
             </div>
           </AnimatedSection>
@@ -202,46 +196,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="section-padding">
-        <div className="container-wide">
-          <AnimatedSection>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
-              <div>
-                <p className="label-caps text-muted-foreground mb-4">Featured Work</p>
-                <h2 className="heading-section">Projects</h2>
-              </div>
-              <Link
-                href="/projects"
-                className="label-caps text-foreground mt-6 md:mt-0 inline-flex items-center gap-2 hover:gap-3 transition-all"
-              >
-                View All Projects <ArrowRight size={14} />
-              </Link>
-            </div>
-          </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {PROJECTS_CONTENT.list.slice(0, 3).map((project, i) => (
-              <AnimatedSection key={project.name} delay={i * 0.1}>
-                <Link href="/projects" className="group block">
-                  <div className="image-reveal aspect-4/3 mb-4">
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <p className="label-caps text-muted-foreground mb-1">{project.type}</p>
-                  <h3 className="font-display text-xl font-medium group-hover:text-muted-foreground transition-colors">
-                    {project.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-1">{project.location}</p>
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="section-padding">

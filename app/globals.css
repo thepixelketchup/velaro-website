@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* ── Hanken Grotesk Variable Font ─────────────────────────── */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('/fonts/HankenGrotesk-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 @theme {
 
   /* HSL BASE VALUES */
@@ -91,8 +108,8 @@
 
   --radius: 0.25rem;
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
 }
 
 @layer base {
@@ -146,7 +163,7 @@
 
   .heading-display {
     font-family: var(--font-display);
-    @apply font-light tracking-tight leading-[1.1];
+    @apply font-extralight tracking-tight leading-[1.1];
   }
 
   .heading-section {
@@ -161,7 +178,7 @@
 
   .label-caps {
     font-family: var(--font-body);
-    @apply text-xs tracking-[0.2em] uppercase font-medium;
+    @apply text-xs tracking-[0.2em] uppercase font-semibold;
   }
 
   .section-padding {

@@ -1,6 +1,5 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import PageHero from "@/components/PageHero";
-import Link from "next/link";
 import { PRODUCTS_CONTENT } from "@/constants/products";
 import { Metadata } from 'next';
 
@@ -27,16 +26,16 @@ const Products = () => {
               <AnimatedSection key={collection.slug}>
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}>
                   <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                    <Link href={`/products/${collection.slug}`} className="image-reveal block aspect-4/5">
+                    <a href="/Velaro - Brochure.pdf" target="_blank" rel="noopener noreferrer" className="image-reveal block aspect-4/5">
                       <img
                         src={collection.image.src}
                         alt={collection.name}
                         className="w-full h-full object-cover"
                       />
-                    </Link>
+                    </a>
                   </div>
                   <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                    <p className="label-caps text-muted-foreground mb-3">Collection</p>
+                    <p className="label-caps text-muted-foreground mb-3">Surface</p>
                     <h2 className="font-display text-3xl md:text-4xl font-light mb-4">{collection.name}</h2>
                     <p className="body-large text-muted-foreground mb-8">{collection.description}</p>
 
@@ -67,12 +66,14 @@ const Products = () => {
                       </div>
                     </div>
 
-                    <Link
-                      href={`/products/${collection.slug}`}
+                    <a
+                      href="/Velaro - Brochure.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 label-caps hover:bg-primary/90 transition-colors"
                     >
-                      View Collection
-                    </Link>
+                      View Surface
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>

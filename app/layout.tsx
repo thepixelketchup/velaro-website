@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-playfair-display",
-  subsets: ["latin"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-});
-
 import { SITE_CONFIG } from "@/constants/site";
 
 export const metadata: Metadata = {
@@ -28,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${dmSans.variable} ${cormorantGaramond.variable} antialiased`}
-      >
+      <body className="antialiased">
         <Navbar />
         {children}
         <Footer />

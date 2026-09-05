@@ -23,7 +23,7 @@ const Navbar = () => {
         setIsOpen(false);
     }, [pathname]);
 
-    const isDarkHeader = !scrolled && ["/", "/about", "/projects", "/gallery"].includes(pathname);
+    const isDarkHeader = !scrolled && ["/", "/about", "/gallery"].includes(pathname);
     const textClass = isDarkHeader ? "text-primary-foreground" : "text-foreground";
     const textMutedClass = isDarkHeader ? "text-primary-foreground/70" : "text-foreground/70";
 
@@ -36,8 +36,12 @@ const Navbar = () => {
                     }`}
             >
                 <div className="container-wide flex items-center justify-between h-20">
-                    <Link href="/" className={`font-display text-2xl font-semibold tracking-tight transition-colors duration-300 uppercase ${textClass}`}>
-                        {BRAND_INFO.name.split(" ")[0]}<span className="font-light"> {BRAND_INFO.name.split(" ").slice(1).join(" ")}</span>
+                    <Link href="/" className="flex items-center">
+                        <img
+                            src={isDarkHeader ? "/Logo_white.svg" : "/Logo_orange.svg"}
+                            alt="Velaro"
+                            className="h-8 w-auto transition-all duration-300"
+                        />
                     </Link>
 
                     {/* Desktop Nav */}
