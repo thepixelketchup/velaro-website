@@ -81,7 +81,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Collections Preview */}
+      {/* Surfaces Preview */}
       <section className="section-padding bg-secondary">
         <div className="container-wide">
           <AnimatedSection>
@@ -98,10 +98,10 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {HOME_CONTENT.collections.slice(0, 3).map((collection, i) => (
-              <AnimatedSection key={collection.slug} delay={i * 0.1}>
-                <Link href={`/products/${collection.slug}`} className="group block">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {HOME_CONTENT.collections.slice(0, 4).map((collection, i) => (
+              <AnimatedSection key={collection.slug} delay={i * 0.05}>
+                <div className="group">
                   <div className="image-reveal aspect-3/4 mb-4 relative">
                     <Image
                       src={collection.image}
@@ -110,30 +110,10 @@ const Index = () => {
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="font-display text-xl font-medium group-hover:text-muted-foreground transition-colors">
+                  <h3 className="font-display text-lg font-medium mb-2">
                     {collection.name}
                   </h3>
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-            {HOME_CONTENT.collections.slice(3).map((collection, i) => (
-              <AnimatedSection key={collection.slug} delay={i * 0.1}>
-                <Link href={`/products/${collection.slug}`} className="group block">
-                  <div className="image-reveal aspect-video mb-4 relative">
-                    <Image
-                      src={collection.image}
-                      alt={collection.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <h3 className="font-display text-xl font-medium group-hover:text-muted-foreground transition-colors">
-                    {collection.name}
-                  </h3>
-                </Link>
+                </div>
               </AnimatedSection>
             ))}
           </div>
