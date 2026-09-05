@@ -1,7 +1,14 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { FaInstagram, FaPinterestP, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { FOOTER_LINKS, BRAND_INFO } from "@/constants/navigation";
+
+const SOCIAL_ICONS: Record<string, React.ReactNode> = {
+    Instagram: <FaInstagram size={18} />,
+    Pinterest: <FaPinterestP size={18} />,
+    LinkedIn: <FaLinkedinIn size={18} />,
+};
 
 const Footer = () => {
     return (
@@ -23,14 +30,15 @@ const Footer = () => {
                         <p className="text-background/70 text-sm leading-relaxed mb-6">
                             {BRAND_INFO.tagline}
                         </p>
-                        <div className="flex gap-4">
+                        <div className="flex gap-3">
                             {BRAND_INFO.socials.map((social) => (
                                 <Link
                                     key={social.label}
                                     href={social.href}
-                                    className="label-caps text-background/50 hover:text-background transition-colors"
+                                    aria-label={social.label}
+                                    className="w-9 h-9 flex items-center justify-center rounded-full border border-background/20 text-background/60 hover:text-background hover:border-background/60 transition-colors"
                                 >
-                                    {social.label}
+                                    {SOCIAL_ICONS[social.label]}
                                 </Link>
                             ))}
                         </div>
