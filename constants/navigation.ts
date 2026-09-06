@@ -9,14 +9,28 @@ export const NAV_LINKS = [
 
 export const BRAND_INFO = {
     name: SITE_CONFIG.name.toUpperCase(),
-    tagline: "Crafting premium surfaces for modern architecture since 1998.",
+    tagline: "Reinventing Indian essence in form.",
     socials: [
         { label: "Instagram", href: "#" },
         { label: "Pinterest", href: "#" },
         { label: "LinkedIn", href: "#" },
     ],
-    address: "42 Design District, Mumbai, Maharashtra 400001",
-    phone: "+91 22 4567 8900",
+    addresses: [
+        {
+            city: "Ahmedabad",
+            address: "501, A Block, EastFace, Iscon Ambli Road, Ahmedabad, Gujarat - 380058",
+        },
+        {
+            city: "Morbi",
+            address: "Plot No. 207/25, D.C, G.I, National Highway, near Boss Ceramics, Rafaleshwar, Morbi, Jambudiya, Gujarat - 363642",
+        },
+    ],
+    address: "501, A Block, EastFace, Iscon Ambli Road, Ahmedabad, Gujarat - 380058",
+    phones: [
+        "+91 98985 56396",
+        "+91 98985 56347",
+    ],
+    phone: "+91 98985 56396",
     email: SITE_CONFIG.email,
     copyright: `© ${new Date().getFullYear()} ${SITE_CONFIG.name}. All rights reserved.`,
 };

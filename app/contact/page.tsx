@@ -16,7 +16,8 @@ const Contact = () => {
         <>
             <PageHero 
                 title={CONTACT_CONTENT.hero.title} 
-                subtitle={CONTACT_CONTENT.hero.subtitle} 
+                subtitle={CONTACT_CONTENT.hero.subtitle}
+                image={CONTACT_CONTENT.hero.image.src}
             />
 
             <section className="section-padding">
@@ -33,7 +34,7 @@ const Contact = () => {
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
+                                    referrerPolicy="strict-origin-when-cross-origin"
                                     title={CONTACT_CONTENT.map.title}
                                 />
                             </div>

@@ -27,7 +27,7 @@ const About = () => {
                         <AnimatedSection>
                             <p className="label-caps text-muted-foreground mb-4">{ABOUT_CONTENT.story.label}</p>
                             <h2 className="heading-section mb-6">{ABOUT_CONTENT.story.title}</h2>
-                            <p className="body-large text-muted-foreground mb-6">
+                            <p className="text-muted-foreground leading-relaxed mb-6">
                                 {ABOUT_CONTENT.story.text1}
                             </p>
                             <p className="text-muted-foreground leading-relaxed mb-6">
@@ -41,7 +41,7 @@ const About = () => {
                             <div className="image-reveal aspect-4/5">
                                 <Image
                                     src={ABOUT_CONTENT.story.image}
-                                    alt="TerraTile craftsmanship"
+                                    alt="Velaro craftsmanship and design story"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
@@ -83,7 +83,7 @@ const About = () => {
                         <AnimatedSection delay={0.2}>
                             <p className="label-caps text-muted-foreground mb-4">{ABOUT_CONTENT.craftsmanship.label}</p>
                             <h2 className="heading-section mb-6">{ABOUT_CONTENT.craftsmanship.title}</h2>
-                            <p className="body-large text-muted-foreground mb-6">
+                            <p className="text-muted-foreground leading-relaxed mb-6">
                                 {ABOUT_CONTENT.craftsmanship.text1}
                             </p>
                             <p className="text-muted-foreground leading-relaxed">

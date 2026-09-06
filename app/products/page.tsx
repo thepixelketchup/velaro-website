@@ -44,7 +44,7 @@ const Products = () => {
                   <div className={i % 2 === 1 ? "lg:order-1" : ""}>
                     <p className="label-caps text-muted-foreground mb-3">Surface</p>
                     <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">{collection.name}</h2>
-                    <p className="body-large text-muted-foreground mb-8">{collection.description}</p>
+                    <p className="text-muted-foreground leading-relaxed mb-8">{collection.description}</p>
 
                     <div className="space-y-6 mb-8">
                       <div>

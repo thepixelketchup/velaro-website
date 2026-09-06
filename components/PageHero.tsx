@@ -15,7 +15,7 @@ const PageHero = ({ title, subtitle, image, compact = false }: PageHeroProps) =>
             {image && (
                 <div className="absolute inset-0">
                     <img src={image} alt={title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/40 to-foreground/20" />
                 </div>
             )}
             {!image && (

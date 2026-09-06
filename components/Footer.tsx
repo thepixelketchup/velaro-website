@@ -17,7 +17,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
                     {/* Brand */}
                     <div className="lg:col-span-1">
-                        <div className="mb-6 -ml-3 md:-ml-3.5">
+                        <div className="mb-1.5 -ml-3 md:-ml-3.5">
                             <Image
                                 src="/Logo_white.svg"
                                 alt="Velaro"
@@ -81,16 +81,42 @@ const Footer = () => {
                         <h4 className="label-caps text-primary-foreground/50 mb-6">Contact</h4>
                         <div className="flex flex-col gap-4 text-sm text-primary-foreground/75">
                             <div className="flex items-start gap-3">
-                                <MapPin size={16} className="mt-0.5 shrink-0 text-primary-foreground/50" />
-                                <span>{BRAND_INFO.address}</span>
+                                <MapPin size={16} className="mt-1 shrink-0 text-primary-foreground/50" />
+                                <div className="space-y-3">
+                                    {BRAND_INFO.addresses.map((item) => (
+                                        <div key={item.city}>
+                                            <span className="block font-medium text-xs tracking-wider uppercase text-primary-foreground/50 mb-0.5">
+                                                {item.city}
+                                            </span>
+                                            <p className="leading-relaxed text-xs sm:text-sm">
+                                                {item.address}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <Phone size={16} className="shrink-0 text-primary-foreground/50" />
-                                <span>{BRAND_INFO.phone}</span>
+                            <div className="flex items-start gap-3 pt-1">
+                                <Phone size={16} className="mt-0.5 shrink-0 text-primary-foreground/50" />
+                                <div className="flex flex-col gap-1">
+                                    {BRAND_INFO.phones.map((phone) => (
+                                        <a
+                                            key={phone}
+                                            href={`tel:${phone.replace(/\s+/g, "")}`}
+                                            className="hover:text-primary-foreground transition-colors"
+                                        >
+                                            {phone}
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                             <div className="flex items-center gap-3">
                                 <Mail size={16} className="shrink-0 text-primary-foreground/50" />
-                                <span>{BRAND_INFO.email}</span>
+                                <a
+                                    href={`mailto:${BRAND_INFO.email}`}
+                                    className="hover:text-primary-foreground transition-colors"
+                                >
+                                    {BRAND_INFO.email}
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -32,13 +32,15 @@ const Index = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="max-w-2xl"
+            className="max-w-3xl lg:max-w-4xl xl:max-w-5xl"
           >
             <p className="label-caps text-primary-foreground/70 mb-4">{HOME_CONTENT.hero.label}</p>
-            <h1 className="heading-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-6">
-              {HOME_CONTENT.hero.title}
+            <h1 className="heading-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-6 leading-[1.12]">
+              <span className="block">Rooted in India.</span>
+              <span className="block">Crafted for India.</span>
+              <span className="block">Designed for the World.</span>
             </h1>
-            <p className="body-large text-primary-foreground/80 mb-10 max-w-lg">
+            <p className="body-large text-primary-foreground/80 mb-10 max-w-2xl">
               {HOME_CONTENT.hero.subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -60,7 +62,7 @@ const Index = () => {
             <AnimatedSection>
               <p className="label-caps text-muted-foreground mb-4">{HOME_CONTENT.philosophy.label}</p>
               <h2 className="heading-section mb-6">{HOME_CONTENT.philosophy.title}</h2>
-              <p className="body-large text-muted-foreground mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-6">
                 {HOME_CONTENT.philosophy.text1}
               </p>
               <p className="text-muted-foreground leading-relaxed">
@@ -71,12 +73,69 @@ const Index = () => {
               <div className="image-reveal aspect-4/5 relative">
                 <Image
                   src={HOME_CONTENT.philosophy.image}
-                  alt="Velaro craftsmanship"
+                  alt="Founder's Note - Velaro"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Promises Section */}
+      <section className="py-20 md:py-32 border-t border-border/60">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            {/* Left Header Column */}
+            <div className="lg:col-span-5 lg:sticky lg:top-28">
+              <AnimatedSection>
+                <p className="label-caps text-muted-foreground mb-4">{HOME_CONTENT.promises.label}</p>
+                <h2 className="heading-section mb-6">{HOME_CONTENT.promises.title}</h2>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  {HOME_CONTENT.promises.description}
+                </p>
+
+                {/* Brand Statement Callout */}
+                <div className="p-6 md:p-8 bg-secondary border-l-2 border-primary">
+                  <p className="font-display text-lg font-medium text-foreground leading-snug mb-2">
+                    Crafted with purpose, delivered with promise.
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    From raw earth to architectural excellence, our commitments guide every surface that leaves our facility.
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* Right: 5 Promises Rows */}
+            <div className="lg:col-span-7 divide-y divide-border/60 border-y border-border/60">
+              {HOME_CONTENT.promises.items.map((promise, i) => (
+                <AnimatedSection key={promise.title} delay={i * 0.08}>
+                  <div className="group py-7 md:py-8 px-4 sm:px-6 hover:bg-secondary/40 transition-colors duration-200">
+                    <div className="flex items-start gap-4 sm:gap-6">
+                      <span className="font-display text-base sm:text-lg font-semibold text-primary mt-0.5 shrink-0">
+                        {promise.number}
+                      </span>
+                      <div className="w-10 h-10 rounded-full bg-card border border-border/70 flex items-center justify-center shrink-0 text-muted-foreground group-hover:text-primary group-hover:border-primary/40 transition-colors">
+                        <promise.icon size={18} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                          <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                            {promise.title}
+                          </h3>
+                        </div>
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base pl-3.5">
+                          {promise.text}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -99,7 +158,7 @@ const Index = () => {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {HOME_CONTENT.collections.slice(0, 4).map((collection, i) => (
+            {HOME_CONTENT.collections.map((collection, i) => (
               <AnimatedSection key={collection.slug} delay={i * 0.05}>
                 <div className="group">
                   <div className="image-reveal aspect-3/4 mb-4 relative">
@@ -127,8 +186,8 @@ const Index = () => {
             <AnimatedSection>
               <div className="image-reveal aspect-4/3 relative">
                 <Image
-                  src={HOME_CONTENT.hero.image}
-                  alt="Tile manufacturing"
+                  src={HOME_CONTENT.technology.image}
+                  alt="Tile manufacturing factory"
                   fill
                   className="object-cover"
                 />
@@ -137,7 +196,7 @@ const Index = () => {
             <AnimatedSection delay={0.2}>
               <p className="label-caps text-muted-foreground mb-4">{HOME_CONTENT.technology.label}</p>
               <h2 className="heading-section mb-6">{HOME_CONTENT.technology.title}</h2>
-              <p className="body-large text-muted-foreground mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-8">
                 {HOME_CONTENT.technology.text}
               </p>
               <div className="space-y-4">
@@ -181,7 +240,7 @@ const Index = () => {
         <div className="container-wide text-center">
           <AnimatedSection>
             <h2 className="heading-section mb-6">{HOME_CONTENT.cta.title}</h2>
-            <p className="body-large text-muted-foreground max-w-2xl mx-auto mb-10">
+            <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               {HOME_CONTENT.cta.text}
             </p>
             <div className="flex flex-wrap justify-center gap-4">

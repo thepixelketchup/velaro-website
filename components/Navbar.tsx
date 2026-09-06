@@ -38,29 +38,41 @@ const Navbar = () => {
         };
     }, [isOpen]);
 
-    const isDarkHeader = !scrolled && ["/", "/about", "/gallery"].includes(pathname);
-    const textClass = isDarkHeader ? "text-primary-foreground" : "text-foreground";
-    const textMutedClass = isDarkHeader ? "text-primary-foreground/70" : "text-foreground/70";
+    const isDarkHeader = !scrolled && ["/", "/about", "/products", "/gallery", "/contact"].includes(pathname);
+    const isWhiteTheme = scrolled || isDarkHeader;
+    const textClass = isWhiteTheme ? "text-primary-foreground" : "text-foreground";
+    const textMutedClass = isWhiteTheme ? "text-primary-foreground/75" : "text-foreground/70";
 
     return (
         <>
             {/* ── Nav bar ── z-50 always, but when drawer is open we hide the hamburger */}
             <nav
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-                    scrolled
-                        ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+                        ? "bg-primary/95 backdrop-blur-md border-b border-primary-foreground/15 shadow-md"
                         : "bg-transparent"
-                }`}
+                    }`}
             >
                 <div className="container-wide flex items-center justify-between h-20">
-                    <Link href="/" className="flex items-center">
+                    <Link href="/" className="flex items-center relative h-10 md:h-11">
                         <Image
-                            src={isDarkHeader ? "/Logo_white.svg" : "/Logo_orange.svg"}
+                            src="/Logo_white.svg"
                             alt="Velaro"
                             width={160}
                             height={44}
                             unoptimized
-                            className="h-10 md:h-11 w-auto transition-all duration-300"
+                            className={`h-10 md:h-11 w-auto transition-opacity duration-300 ${
+                                isWhiteTheme ? "opacity-100" : "opacity-0 pointer-events-none absolute inset-0"
+                            }`}
+                        />
+                        <Image
+                            src="/Logo_orange.svg"
+                            alt="Velaro"
+                            width={160}
+                            height={44}
+                            unoptimized
+                            className={`h-10 md:h-11 w-auto transition-opacity duration-300 ${
+                                !isWhiteTheme ? "opacity-100" : "opacity-0 pointer-events-none absolute inset-0"
+                            }`}
                         />
                     </Link>
 
@@ -70,19 +82,17 @@ const Navbar = () => {
                             <Link
                                 key={link.path}
                                 href={link.path}
-                                className={`relative py-1 label-caps transition-colors duration-300 ${
-                                    pathname === link.path
+                                className={`relative py-1 label-caps transition-colors duration-300 ${pathname === link.path
                                         ? textClass
                                         : `${textMutedClass} hover:${textClass}`
-                                }`}
+                                    }`}
                             >
                                 {link.label}
                                 {pathname === link.path && (
                                     <motion.span
                                         layoutId="desktop-nav-underline"
-                                        className={`absolute left-0 -bottom-1 w-full h-[1.5px] ${
-                                            isDarkHeader ? "bg-primary-foreground" : "bg-foreground"
-                                        }`}
+                                        className={`absolute left-0 -bottom-1 w-full h-[1.5px] ${isWhiteTheme ? "bg-primary-foreground" : "bg-foreground"
+                                            }`}
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ duration: 0.3 }}
@@ -146,11 +156,10 @@ const Navbar = () => {
                                 >
                                     <Link
                                         href={link.path}
-                                        className={`relative inline-block py-1 font-display text-3xl font-semibold transition-colors ${
-                                            pathname === link.path
+                                        className={`relative inline-block py-1 font-display text-3xl font-semibold transition-colors ${pathname === link.path
                                                 ? "text-foreground"
                                                 : "text-muted-foreground hover:text-foreground"
-                                        }`}
+                                            }`}
                                     >
                                         {link.label}
                                         {pathname === link.path && (
