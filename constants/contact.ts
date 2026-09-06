@@ -39,7 +39,7 @@ export const CONTACT_CONTENT = {
         link: "https://wa.me/912245678900",
     },
     map: {
-        title: `${SITE_CONFIG.name} Office Location`,
-        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.1!2d72.82!3d19.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAw&um=1&ie=UTF-8",
+        title: `${SITE_CONFIG.name} Office Location - Mumbai`,
+        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15088.751680516628!2d72.8188555871582!3d19.011432400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ced0d69b3cb1%3A0x2db4fb98471b42eb!2sLower%20Parel%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
     },
 };

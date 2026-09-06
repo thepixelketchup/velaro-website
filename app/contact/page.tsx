@@ -24,7 +24,7 @@ const Contact = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                         {/* Map taking the place of the old Contact Form */}
                         <AnimatedSection>
-                            <h2 className="font-display text-2xl font-light mb-8">Our Location</h2>
+                            <h2 className="font-display text-2xl font-semibold mb-8">Our Location</h2>
                             <div className="aspect-4/3 bg-secondary w-full">
                                 <iframe
                                     src={CONTACT_CONTENT.map.src}
@@ -41,7 +41,7 @@ const Contact = () => {
 
                         {/* Contact Info */}
                         <AnimatedSection delay={0.2}>
-                            <h2 className="font-display text-2xl font-light mb-8">{CONTACT_CONTENT.info.title}</h2>
+                            <h2 className="font-display text-2xl font-semibold mb-8">{CONTACT_CONTENT.info.title}</h2>
                             <div className="space-y-8 mb-10">
                                 {CONTACT_CONTENT.info.items.map((item, i) => (
                                     <div key={item.label} className="flex items-start gap-4">

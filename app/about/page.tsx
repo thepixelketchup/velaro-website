@@ -58,7 +58,7 @@ const About = () => {
                             <AnimatedSection key={item.title} delay={i * 0.1}>
                                 <div className="text-center">
                                     <item.icon size={32} className="mx-auto mb-4 text-foreground" />
-                                    <h3 className="font-display text-2xl font-light mb-4">{item.title}</h3>
+                                    <h3 className="font-display text-2xl font-semibold mb-4">{item.title}</h3>
                                     <p className="text-muted-foreground leading-relaxed">{item.text}</p>
                                 </div>
                             </AnimatedSection>

@@ -110,7 +110,7 @@ const Index = () => {
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="font-display text-lg font-medium mb-2">
+                  <h3 className="font-display text-lg font-semibold mb-2">
                     {collection.name}
                   </h3>
                 </div>
@@ -167,7 +167,7 @@ const Index = () => {
               <AnimatedSection key={stat.label} delay={i * 0.1}>
                 <div className="text-center">
                   <stat.icon size={28} className="mx-auto mb-4 text-primary-foreground/60" />
-                  <p className="font-display text-4xl md:text-5xl font-light mb-2">{stat.value}</p>
+                  <p className="font-display text-4xl md:text-5xl font-semibold mb-2">{stat.value}</p>
                   <p className="label-caps text-primary-foreground/60">{stat.label}</p>
                 </div>
               </AnimatedSection>

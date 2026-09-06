@@ -11,7 +11,7 @@ interface PageHeroProps {
 
 const PageHero = ({ title, subtitle, image, compact = false }: PageHeroProps) => {
     return (
-        <section className={`relative ${compact ? "h-[50vh]" : "h-[60vh]"} min-h-[400px] flex items-end`}>
+        <section className={`relative ${compact ? "min-h-[280px] md:h-[50vh]" : "min-h-[320px] md:h-[60vh]"} flex items-end`}>
             {image && (
                 <div className="absolute inset-0">
                     <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -21,7 +21,7 @@ const PageHero = ({ title, subtitle, image, compact = false }: PageHeroProps) =>
             {!image && (
                 <div className="absolute inset-0 bg-secondary" />
             )}
-            <div className="container-wide relative pb-12 md:pb-16">
+            <div className="container-wide relative pb-8 md:pb-16">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
