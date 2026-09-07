@@ -17,7 +17,7 @@ export const HOME_CONTENT = {
         label: "Premium Surfaces",
         title: "Rooted in India. Crafted for India. Designed for the World.",
         subtitle: "Premium tiles designed for modern living and commercial excellence.",
-        ctaprimary: "View Products",
+        ctaprimary: "View Surfaces",
     },
     philosophy: {
         label: "Founder's Note",
