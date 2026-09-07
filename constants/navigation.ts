@@ -2,7 +2,7 @@ import { SITE_CONFIG } from "@/constants/site";
 
 export const NAV_LINKS = [
     { label: "Home", path: "/" },
-    { label: "Products", path: "/products" },
+    { label: "Surfaces", path: "/surfaces" },
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
 ];
@@ -37,7 +37,7 @@ export const BRAND_INFO = {
 
 export const FOOTER_LINKS = {
     explore: [
-        { label: "Products", path: "/products" },
+        { label: "Surfaces", path: "/surfaces" },
     ],
     company: [
         { label: "About Us", path: "/about" },

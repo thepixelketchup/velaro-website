@@ -38,7 +38,7 @@ const Navbar = () => {
         };
     }, [isOpen]);
 
-    const isDarkHeader = !scrolled && ["/", "/about", "/products", "/gallery", "/contact"].includes(pathname);
+    const isDarkHeader = !scrolled && ["/", "/about", "/surfaces", "/gallery", "/contact"].includes(pathname);
     const isWhiteTheme = scrolled || isDarkHeader;
     const textClass = isWhiteTheme ? "text-primary-foreground" : "text-foreground";
     const textMutedClass = isWhiteTheme ? "text-primary-foreground/75" : "text-foreground/70";

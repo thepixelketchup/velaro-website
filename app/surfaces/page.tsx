@@ -1,31 +1,36 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import PageHero from "@/components/PageHero";
+import HashScrollHandler from "@/components/HashScrollHandler";
 import Link from "next/link";
 import Image from "next/image";
-import { PRODUCTS_CONTENT } from "@/constants/products";
+import { SURFACES_CONTENT } from "@/constants/surfaces";
 import { Metadata } from 'next';
 import { SITE_CONFIG } from "@/constants/site";
 
 export const metadata: Metadata = {
-    title: `Products | ${SITE_CONFIG.name}`,
+    title: `Surfaces | ${SITE_CONFIG.name}`,
     description: `Explore our diverse range of premium tile surfaces and finishes by ${SITE_CONFIG.name}.`,
 };
 
-const Products = () => {
+const Surfaces = () => {
   return (
     <>
+      <HashScrollHandler />
       <PageHero
-        title={PRODUCTS_CONTENT.hero.title}
-        subtitle={PRODUCTS_CONTENT.hero.subtitle}
-        image={PRODUCTS_CONTENT.hero.image.src}
+        title={SURFACES_CONTENT.hero.title}
+        subtitle={SURFACES_CONTENT.hero.subtitle}
+        image={SURFACES_CONTENT.hero.image.src}
       />
 
       <section className="section-padding">
         <div className="container-wide">
           <div className="space-y-24 md:space-y-32">
-            {PRODUCTS_CONTENT.collections.map((collection, i) => (
+            {SURFACES_CONTENT.collections.map((collection, i) => (
               <AnimatedSection key={collection.slug}>
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}>
+                <div
+                  id={collection.slug}
+                  className={`scroll-mt-28 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}
+                >
                   <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                     <Link
                       href="/Velaro - Brochure.pdf"
@@ -92,4 +97,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Surfaces;

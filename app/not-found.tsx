@@ -28,10 +28,10 @@ export default function NotFound() {
                 Return Home <ArrowRight size={14} />
               </Link>
               <Link
-                href="/products"
+                href="/surfaces"
                 className="inline-flex items-center gap-2 border border-foreground text-foreground px-8 py-4 label-caps hover:bg-foreground hover:text-background transition-colors"
               >
-                View Products
+                View Surfaces
               </Link>
             </div>
           </AnimatedSection>

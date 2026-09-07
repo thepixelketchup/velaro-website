@@ -45,7 +45,7 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/products"
+                href="/surfaces"
                 className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 label-caps hover:bg-foreground/90 transition-colors"
               >
                 Explore Surfaces <ArrowRight size={14} />
@@ -149,7 +149,7 @@ const Index = () => {
                 <h2 className="heading-section">Our Surfaces</h2>
               </div>
               <Link
-                href="/products"
+                href="/surfaces"
                 className="label-caps text-foreground mt-6 md:mt-0 inline-flex items-center gap-2 hover:gap-3 transition-all"
               >
                 View All Surfaces <ArrowRight size={14} />
@@ -160,7 +160,7 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {HOME_CONTENT.collections.map((collection, i) => (
               <AnimatedSection key={collection.slug} delay={i * 0.05}>
-                <div className="group">
+                <Link href={`/surfaces#${collection.slug}`} className="group block cursor-pointer">
                   <div className="image-reveal aspect-3/4 mb-4 relative">
                     <Image
                       src={collection.image}
@@ -169,10 +169,11 @@ const Index = () => {
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="font-display text-lg font-semibold mb-2">
-                    {collection.name}
+                  <h3 className="font-display text-lg font-semibold mb-2 group-hover:text-primary transition-colors flex items-center justify-between">
+                    <span>{collection.name}</span>
+                    <ArrowRight size={16} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                   </h3>
-                </div>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
@@ -245,7 +246,7 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/products"
+                href="/surfaces"
                 className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 label-caps hover:bg-foreground/90 transition-colors"
               >
                 Explore Surfaces <ArrowRight size={14} />
