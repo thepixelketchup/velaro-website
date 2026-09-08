@@ -122,8 +122,23 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-primary-foreground/15 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary-foreground/50">
+                <div className="border-t border-primary-foreground/15 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary-foreground/50 text-center md:text-left">
                     <p>{BRAND_INFO.copyright}</p>
+                    <p>
+                        <a
+                            href="https://www.thecuriousbunny.nl/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-primary-foreground transition-colors inline-flex items-center gap-1 group"
+                        >
+                            <span>
+                                Designed and Built by{" "}
+                                <span className="font-medium text-primary-foreground/80 group-hover:text-primary-foreground underline underline-offset-4 decoration-primary-foreground/30 group-hover:decoration-primary-foreground transition-colors">
+                                    The Curious Bunny Studios
+                                </span>
+                            </span>
+                        </a>
+                    </p>
                     <div className="flex gap-6">
                         <Link href="/privacy-policy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link>
                         <Link href="/terms-of-service" className="hover:text-primary-foreground transition-colors">Terms of Service</Link>
